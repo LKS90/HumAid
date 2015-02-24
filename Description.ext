@@ -1,0 +1,125 @@
+loadScreen = "workshopPicture.paa";
+overviewPicture = "workshopPicture.paa";
+overviewText = "Assist the local population during this crisis. Fly supplies to the countryside and shuttle injured islanders to the hosptial.";
+avgScore = 4000;
+author = "LKS"; // Author
+onLoadName = "HumAid"; // Mission name (temporary solution; actual name set in editor will be used later in the alpha)
+onLoadMission = "Assist the local population during this crisis."; // Description
+
+class Header
+{
+	gameType = Sandbox; // MP mission type
+};
+
+class CfgUnitInsignia
+{
+	class rc_pilot  // This will be called from your script file
+	{
+		displayName = "rc_pilot"; // Name displayed in Arsenal
+		author = "LKS"; // Author displayed in Arsenal
+		texture = "ins_opq.paa"; // Image path
+		textureVehicle = ""; // Does nothing currently, reserved for future use
+	};
+};
+
+class CfgSounds
+{
+	sounds[] = {};
+	class cas
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "cas_dialog";
+		// filename, volume, pitch
+		sound[] = {"cas.wss", 4, 1};
+		titles[] = {};
+	};
+	class intro
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "intro_dialog";
+		// filename, volume, pitch
+		sound[] = {"intro.wss", 2.5, 1};
+		titles[] = {};
+	};
+	class t1_finished
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "t1_finished_dialog";
+		// filename, volume, pitch
+		sound[] = {"t1_finished.wss", 4, 1};
+		titles[] = {};
+	};
+	class t2_finished
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "t2_finished_dialog";
+		// filename, volume, pitch
+		sound[] = {"t2_finished.wss", 10, 1.1};
+		titles[] = {};
+	};
+	class t2_ready
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "t2_ready_dialog";
+		// filename, volume, pitch
+		sound[] = {"t2_ready.wss", 10, 1.1};
+		titles[] = {};
+	};
+	class t3_finished
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "t3_finished_dialog";
+		// filename, volume, pitch
+		sound[] = {"t3_finished.wss", 10, 1.12};
+		titles[] = {};
+	};
+	class t3_ready
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "t3_ready_dialog";
+		// filename, volume, pitch
+		sound[] = {"t3_ready.wss", 10, 1.12};
+		titles[] = {};
+	};
+	class t3_start
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "t3_start_dialog";
+		// filename, volume, pitch
+		sound[] = {"t3_start.wss", 4, 1};
+		titles[] = {};
+	};
+};
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission Failed";
+		subtitle = "";
+		description = "You wrecked your Helicopter.";
+		pictureBackground = "";
+		picture = "n_air";
+		pictureColor[] = {0.8,0.1,0.1,1};
+	};
+	
+	class End2
+	{
+		title = "Mission Failed";
+		subtitle = "";
+		description = "The supplies are essential for the Population. Failure is no Option.";
+		pictureBackground = "";
+		picture = "mil_warning";
+		pictureColor[] = {0.8,0.1,0.1,1};
+	};
+	
+	class End3
+	{
+		title = "Mission Successful";
+		subtitle = "";
+		description = "You completed all tasks successfully, congratulations!";
+		pictureBackground = "";
+		picture = "n_air";
+		pictureColor[] = {0.0,0.6,0.1,1};
+	};
+};
